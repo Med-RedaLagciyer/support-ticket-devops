@@ -1,0 +1,10 @@
+# Docker Setup files and folders
+.env
+
+# Backend app
+backend/vendor
+backend/var
+
+# Frontend app
+frontend/node_modules/
+frontend/dist/
