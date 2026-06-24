@@ -36,6 +36,9 @@ jobs:
           php-version: '8.3'
           extensions: pdo, pdo_pgsql, intl, zip, mbstring, opcache
 
+      - name: Create backend .env
+        run: cp backend/.env.example backend/.env
+          
       - name: Install dependencies
         working-directory: backend
         run: composer install --prefer-dist --no-progress
