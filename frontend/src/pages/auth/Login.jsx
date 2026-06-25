@@ -24,8 +24,10 @@ export default function Login() {
         setError(null)
         try {
             const res = await login(form)
-            setAuth(res.data.token, null)
-            navigate('/dashboard')
+            const token = res.data.token
+            const payload = JSON.parse(atob(token.split('.')[1]))
+            setAuth(token, null)
+            navigate(payload.roles?.includes('ROLE_ADMIN') ? '/admin' : '/dashboard')
         } catch (err) {
             setError(err.response?.data?.message || 'Login failed')
         } finally {
