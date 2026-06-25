@@ -50,6 +50,10 @@ Réalisé par : **Ruddy** & **Bahi**
     ```bash
         docker exec -it st_php php bin/console doctrine:migrations:migrate --no-interaction
 
-9. Accéder à l'application
+9. Créer le premier utilisateur admin
+    ```bash
+    docker exec -it st_php php bin/console app:create-admin email@example.com motdepasse Prénom Nom
+
+10. Accéder à l'application
 App (Frontend): http://localhost
 API (Backend): http://localhost/api
