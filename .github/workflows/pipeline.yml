@@ -86,7 +86,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: frontend
-        run: npm ci #npm ci same as npm install but stricter, it install the exact versoions from package-lock
+        run: npm install
 
       - name: Build
         working-directory: frontend
