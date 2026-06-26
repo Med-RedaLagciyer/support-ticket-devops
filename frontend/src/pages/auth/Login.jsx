@@ -26,7 +26,7 @@ export default function Login() {
             const res = await login(form)
             const token = res.data.token
             const payload = JSON.parse(atob(token.split('.')[1]))
-            setAuth(token, null)
+            setAuth(token, payload)
             navigate(payload.roles?.includes('ROLE_ADMIN') ? '/admin' : '/dashboard')
         } catch (err) {
             setError(err.response?.data?.message || 'Login failed')
