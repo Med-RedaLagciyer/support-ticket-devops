@@ -3,7 +3,7 @@
 ![CI/CD Pipeline](https://github.com/Med-RedaLagciyer/support-ticket-devops/actions/workflows/pipeline.yml/badge.svg)
 
 **Université Ibn Tofail** | Module DevOps | Pr. Soufiane HAMIDA
-Réalisé par : **Ruddy** & **Bahi**
+Réalisé par : **Mohammed-reda LAGCIYER** & **Mohammed EL BAHI**
 
 ## Stack
 
@@ -59,3 +59,11 @@ Réalisé par : **Ruddy** & **Bahi**
 10. Accéder à l'application
 App (Frontend): http://localhost
 API (Backend): http://localhost/api
+
+## Docker Hub
+
+Image: [ruuddy99/support-ticket-devops](https://hub.docker.com/r/ruuddy99/support-ticket-devops)
+
+## Rapport
+
+Le rapport du projet est disponible dans le dossier [`docs/`](./docs/).
