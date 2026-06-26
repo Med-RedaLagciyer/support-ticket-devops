@@ -47,6 +47,10 @@ jobs:
         working-directory: backend
         run: composer install --prefer-dist --no-progress
 
+      - name: Lint
+        working-directory: backend
+        run: vendor/bin/phpstan analyse src --level=1
+
       - name: Generate JWT keys
         working-directory: backend
         env:
@@ -87,6 +91,10 @@ jobs:
       - name: Install dependencies
         working-directory: frontend
         run: npm install
+      
+      - name: Lint
+        working-directory: frontend
+        run: npm run lint
 
       - name: Build
         working-directory: frontend
@@ -113,5 +121,5 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./backend
-          push: false #for now since we dont have a docker prod config yet
+          push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/support-ticket-devops:latest
