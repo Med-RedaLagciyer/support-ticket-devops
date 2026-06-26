@@ -120,7 +120,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: ./backend
+          context: ./docker/php
           file: ./docker/php/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/support-ticket-devops:latest
